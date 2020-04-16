@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="opengl-tutorial" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/opengl-tutorial" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/include/GL" />
+					<Add directory="/usr/include/GLFW" />
+					<Add directory="include" />
+					<Add directory="/home/eran-lab/Code/opengl-tutorial/imgui" />
+					<Add directory="/home/eran-lab/Code/opengl-tutorial/tests" />
+				</Compiler>
+				<Linker>
+					<Add library="libGLEW" />
+					<Add library="libglfw" />
+					<Add library="libGL" />
+					<Add directory="/usr/lib/x86_64-linux-gnu" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/opengl-tutorial" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="imgui/imconfig.h" />
+		<Unit filename="imgui/imgui.cpp" />
+		<Unit filename="imgui/imgui.h" />
+		<Unit filename="imgui/imgui_demo.cpp" />
+		<Unit filename="imgui/imgui_draw.cpp" />
+		<Unit filename="imgui/imgui_impl_glfw.cpp" />
+		<Unit filename="imgui/imgui_impl_glfw.h" />
+		<Unit filename="imgui/imgui_impl_opengl3.cpp" />
+		<Unit filename="imgui/imgui_impl_opengl3.h" />
+		<Unit filename="imgui/imgui_internal.h" />
+		<Unit filename="imgui/imgui_widgets.cpp" />
+		<Unit filename="imgui/imstb_rectpack.h" />
+		<Unit filename="imgui/imstb_textedit.h" />
+		<Unit filename="imgui/imstb_truetype.h" />
+		<Unit filename="include/DebugManager.h" />
+		<Unit filename="include/IndexBuffer.h" />
+		<Unit filename="include/Renderer.h" />
+		<Unit filename="include/Shader.h" />
+		<Unit filename="include/Texture.h" />
+		<Unit filename="include/VertexArray.h" />
+		<Unit filename="include/VertexBuffer.h" />
+		<Unit filename="include/VertexBufferLayout.h" />
+		<Unit filename="include/stb_image.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="res/Basic.shader" />
+		<Unit filename="res/Cube.shader" />
+		<Unit filename="res/batman-logo.jpeg" />
+		<Unit filename="src/DebugManager.cpp" />
+		<Unit filename="src/IndexBuffer.cpp" />
+		<Unit filename="src/Renderer.cpp" />
+		<Unit filename="src/Shader.cpp" />
+		<Unit filename="src/Texture.cpp" />
+		<Unit filename="src/VertexArray.cpp" />
+		<Unit filename="src/VertexBuffer.cpp" />
+		<Unit filename="src/VertexBufferLayout.cpp" />
+		<Unit filename="tests/Test.cpp" />
+		<Unit filename="tests/Test.h" />
+		<Unit filename="tests/TestClearColor.cpp" />
+		<Unit filename="tests/TestClearColor.h" />
+		<Unit filename="tests/TestCube.cpp" />
+		<Unit filename="tests/TestCube.h" />
+		<Unit filename="tests/TestTexture.cpp" />
+		<Unit filename="tests/TestTexture.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
