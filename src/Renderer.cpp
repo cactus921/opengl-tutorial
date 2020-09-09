@@ -18,10 +18,16 @@ Renderer::~Renderer()
 
 void Renderer::Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const
 {
-
     va.Bind();
     ib.Bind();
     GLCALL(glDrawElements(GL_TRIANGLES, ib.GetCount(), GL_UNSIGNED_INT, nullptr));
+}
+
+void Renderer::Draw(const VertexArray* va, const IndexBuffer* ib, const Shader* shader) const
+{
+    va->Bind();
+    ib->Bind();
+    GLCALL(glDrawElements(GL_TRIANGLES, ib->GetCount(), GL_UNSIGNED_INT, nullptr));
 }
 
 void Renderer::Clear() const

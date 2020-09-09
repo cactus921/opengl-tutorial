@@ -23,6 +23,7 @@
 					<Add library="libGLEW" />
 					<Add library="libglfw" />
 					<Add library="libGL" />
+					<Add library="libSDL" />
 					<Add directory="/usr/lib/x86_64-linux-gnu" />
 				</Linker>
 			</Target>
@@ -57,11 +58,18 @@
 		<Unit filename="imgui/imstb_rectpack.h" />
 		<Unit filename="imgui/imstb_textedit.h" />
 		<Unit filename="imgui/imstb_truetype.h" />
+		<Unit filename="include/Actor.h" />
+		<Unit filename="include/Camera.h" />
 		<Unit filename="include/DebugManager.h" />
+		<Unit filename="include/DirectionalLight.h" />
 		<Unit filename="include/IndexBuffer.h" />
+		<Unit filename="include/Light.h" />
+		<Unit filename="include/PointLight.h" />
 		<Unit filename="include/Renderer.h" />
+		<Unit filename="include/Scene.h" />
 		<Unit filename="include/Shader.h" />
 		<Unit filename="include/Texture.h" />
+		<Unit filename="include/Transform.h" />
 		<Unit filename="include/VertexArray.h" />
 		<Unit filename="include/VertexBuffer.h" />
 		<Unit filename="include/VertexBufferLayout.h" />
@@ -69,12 +77,23 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="res/Basic.shader" />
 		<Unit filename="res/Cube.shader" />
+		<Unit filename="res/LightSource.shader" />
+		<Unit filename="res/Phong.shader" />
+		<Unit filename="res/VertNoise.shader" />
+		<Unit filename="res/VertShader.shader" />
 		<Unit filename="res/batman-logo.jpeg" />
+		<Unit filename="src/Actor.cpp" />
+		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/DebugManager.cpp" />
+		<Unit filename="src/DirectionalLight.cpp" />
 		<Unit filename="src/IndexBuffer.cpp" />
+		<Unit filename="src/Light.cpp" />
+		<Unit filename="src/PointLight.cpp" />
 		<Unit filename="src/Renderer.cpp" />
+		<Unit filename="src/Scene.cpp" />
 		<Unit filename="src/Shader.cpp" />
 		<Unit filename="src/Texture.cpp" />
+		<Unit filename="src/Transform.cpp" />
 		<Unit filename="src/VertexArray.cpp" />
 		<Unit filename="src/VertexBuffer.cpp" />
 		<Unit filename="src/VertexBufferLayout.cpp" />
@@ -84,8 +103,18 @@
 		<Unit filename="tests/TestClearColor.h" />
 		<Unit filename="tests/TestCube.cpp" />
 		<Unit filename="tests/TestCube.h" />
+		<Unit filename="tests/TestLighting.cpp" />
+		<Unit filename="tests/TestLighting.h" />
+		<Unit filename="tests/TestNoise.cpp" />
+		<Unit filename="tests/TestNoise.h" />
+		<Unit filename="tests/TestProjection.cpp" />
+		<Unit filename="tests/TestProjection.h" />
+		<Unit filename="tests/TestScene.cpp" />
+		<Unit filename="tests/TestScene.h" />
 		<Unit filename="tests/TestTexture.cpp" />
 		<Unit filename="tests/TestTexture.h" />
+		<Unit filename="tests/TestVertexShader.cpp" />
+		<Unit filename="tests/TestVertexShader.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

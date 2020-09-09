@@ -12,6 +12,7 @@ Texture::Texture(const std::string& filePath)
 
     GLCALL(glGenTextures(1, &m_RendererID));
     GLCALL(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+    GLDebugOut("Bound Texture", m_RendererID);
 
     GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
     GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
@@ -25,20 +26,34 @@ Texture::Texture(const std::string& filePath)
         stbi_image_free(m_LocalBuffer);
 
 }
-
+/*
 Texture::~Texture()
 {
     //dtor
     GLCALL(glDeleteTextures(1, &m_RendererID));
 }
-
-void Texture::Bind(unsigned int slot) const
+*/
+void Texture::Release()
 {
+    //dtor
+    GLCALL(glDeleteTextures(1, &m_RendererID));
+    m_RendererID = 0;
+    m_LocalBuffer = nullptr;
+}
+
+void Texture::Bind(unsigned int slot)
+{
+    m_texSlot = slot;
     GLCALL(glActiveTexture(GL_TEXTURE0 + slot));
     GLCALL(glBindTexture(GL_TEXTURE_2D, m_RendererID));
 }
 
 
+void Texture::Bind()
+{
+    GLCALL(glActiveTexture(GL_TEXTURE0 + m_texSlot));
+    GLCALL(glBindTexture(GL_TEXTURE_2D, m_RendererID));
+}
 
 void Texture::Unbind() const
 {

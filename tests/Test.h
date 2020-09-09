@@ -18,6 +18,7 @@ namespace test {
             virtual void OnRender() {}
             virtual void OnImGuiRender() {}
             virtual void OnDestruct() {}
+            virtual void OnKeyPress(int key, int action) {}
 
     };
 

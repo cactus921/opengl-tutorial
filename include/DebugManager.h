@@ -18,7 +18,13 @@ void GLDebugOut(const std::string& name, T value)
 {
     std::cout << name << ": " << value << std::endl;
 }
-
+/*
+template <typename T>
+void GLDebugOut(const std::string& name)
+{
+    std::cout << name << std::endl;
+}
+*/
 class DebugManager
 {
     public:

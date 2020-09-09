@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587030528 source:/home/eran-lab/Code/opengl-tutorial/main.cpp
+1593013382 source:/home/eran-lab/Code/opengl-tutorial/main.cpp
 	<fstream>
 	<string>
 	<sstream>
@@ -8,48 +8,54 @@
 	"Renderer.h"
 	"VertexBufferLayout.h"
 	"Texture.h"
+	"Camera.h"
+	"Actor.h"
+	<GLFW/glfw3.h>
 	"Test.h"
 	"TestClearColor.h"
 	"TestTexture.h"
 	"TestCube.h"
-	<GLFW/glfw3.h>
+	"TestProjection.h"
+	"TestVertexShader.h"
+	"TestLighting.h"
+	"TestScene.h"
 	"glm/glm.hpp"
 	"glm/gtc/matrix_transform.hpp"
 	"imgui.h"
 	"imgui_impl_glfw.h"
 	"imgui_impl_opengl3.h"
 
-1586775327 /home/eran-lab/Code/opengl-tutorial/include/Renderer.h
+1592391103 /home/eran-lab/Code/opengl-tutorial/include/Renderer.h
 	"VertexArray.h"
 	"IndexBuffer.h"
 	"Shader.h"
 
-1586875226 /home/eran-lab/Code/opengl-tutorial/include/VertexBuffer.h
+1592381056 /home/eran-lab/Code/opengl-tutorial/include/VertexBuffer.h
 
-1586709743 /home/eran-lab/Code/opengl-tutorial/include/IndexBuffer.h
+1592390516 /home/eran-lab/Code/opengl-tutorial/include/IndexBuffer.h
 
-1586775111 source:/home/eran-lab/Code/opengl-tutorial/src/IndexBuffer.cpp
+1592401702 source:/home/eran-lab/Code/opengl-tutorial/src/IndexBuffer.cpp
 	"IndexBuffer.h"
 	"Renderer.h"
 	"DebugManager.h"
 
-1586959573 source:/home/eran-lab/Code/opengl-tutorial/src/Renderer.cpp
+1592401729 source:/home/eran-lab/Code/opengl-tutorial/src/Renderer.cpp
 	"Renderer.h"
 	"DebugManager.h"
 
-1586875221 source:/home/eran-lab/Code/opengl-tutorial/src/VertexBuffer.cpp
+1592401770 source:/home/eran-lab/Code/opengl-tutorial/src/VertexBuffer.cpp
 	"VertexBuffer.h"
 	"Renderer.h"
 	"DebugManager.h"
 
-1586709864 /home/eran-lab/Code/opengl-tutorial/include/VertexArray.h
+1592389771 /home/eran-lab/Code/opengl-tutorial/include/VertexArray.h
 	"VertexBuffer.h"
 
 1586770684 /home/eran-lab/Code/opengl-tutorial/include/VertexBufferLayout.h
 	<vector>
 	<GL/glew.h>
 
-1586789375 source:/home/eran-lab/Code/opengl-tutorial/src/VertexArray.cpp
+1592401665 source:/home/eran-lab/Code/opengl-tutorial/src/VertexArray.cpp
 	"VertexArray.h"
 	"VertexBufferLayout.h"
 	"Renderer.h"
@@ -60,19 +66,19 @@
 	"Renderer.h"
 	"DebugManager.h"
 
-1586795216 /home/eran-lab/Code/opengl-tutorial/include/Shader.h
+1592928578 /home/eran-lab/Code/opengl-tutorial/include/Shader.h
 	<string>
 	<fstream>
 	<sstream>
 	<unordered_map>
 	<glm/glm.hpp>
 
-1586795317 source:/home/eran-lab/Code/opengl-tutorial/src/Shader.cpp
+1592936646 source:/home/eran-lab/Code/opengl-tutorial/src/Shader.cpp
 	"Shader.h"
 	"Renderer.h"
 	"DebugManager.h"
 
-1586772144 /home/eran-lab/Code/opengl-tutorial/include/DebugManager.h
+1592402217 /home/eran-lab/Code/opengl-tutorial/include/DebugManager.h
 	<iostream>
 	<assert.h>
 	<GL/glew.h>
@@ -81,10 +87,10 @@
 	"DebugManager.h"
 	<GL/glew.h>
 
-1586777261 /home/eran-lab/Code/opengl-tutorial/include/Texture.h
+1592743251 /home/eran-lab/Code/opengl-tutorial/include/Texture.h
 	"DebugManager.h"
 
-1586963702 source:/home/eran-lab/Code/opengl-tutorial/src/Texture.cpp
+1592743088 source:/home/eran-lab/Code/opengl-tutorial/src/Texture.cpp
 	"Texture.h"
 	"stb_image.h"
 
@@ -918,7 +924,7 @@
 1586885334 /home/eran-lab/Code/opengl-tutorial/tests/TestClearColor.h
 	"Test.h"
 
-1587030587 /home/eran-lab/Code/opengl-tutorial/tests/Test.h
+1592080045 /home/eran-lab/Code/opengl-tutorial/tests/Test.h
 	<vector>
 	<functional>
 	"DebugManager.h"
@@ -943,7 +949,7 @@
 	"glm/glm.hpp"
 	"glm/gtc/matrix_transform.hpp"
 
-1587030684 source:/home/eran-lab/Code/opengl-tutorial/tests/Test.cpp
+1592153759 source:/home/eran-lab/Code/opengl-tutorial/tests/Test.cpp
 	"Test.h"
 	<GL/glew.h>
 	"imgui.h"
@@ -961,4 +967,308 @@
 	<GL/glew.h>
 	"DebugManager.h"
 	"imgui.h"
+
+1588501164 /home/eran-lab/Code/opengl-tutorial/tests/TestProjection.h
+	"Test.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+
+1589024569 source:/home/eran-lab/Code/opengl-tutorial/tests/TestProjection.cpp
+	"TestProjection.h"
+	<GL/glew.h>
+	"DebugManager.h"
+	"imgui.h"
+	"glm/gtx/euler_angles.hpp"
+
+1567838739 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/euler_angles.hpp
+	"../glm.hpp"
+	"euler_angles.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/euler_angles.inl
+	"compatibility.hpp"
+
+1567838739 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/compatibility.hpp
+	"../glm.hpp"
+	"../gtc/quaternion.hpp"
+	<cfloat>
+	<cmath>
+	"compatibility.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtc/quaternion.hpp
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_float.hpp"
+	"../ext/quaternion_float_precision.hpp"
+	"../ext/quaternion_double.hpp"
+	"../ext/quaternion_double_precision.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../ext/quaternion_trigonometric.hpp"
+	"../ext/quaternion_transform.hpp"
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"quaternion.inl"
+
+1567868987 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/vector_relational.hpp
+	"../detail/qualifier.hpp"
+	"vector_relational.inl"
+
+1539729779 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/vector_relational.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+	"../detail/qualifier.hpp"
+	"../detail/type_float.hpp"
+
+1539729778 /home/eran-lab/Code/opengl-tutorial/include/glm/detail/type_float.hpp
+	"setup.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_common.hpp
+	"../ext/scalar_constants.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	<limits>
+	"quaternion_common.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_geometric.hpp
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"../ext/vector_relational.hpp"
+	"quaternion_geometric.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_geometric.inl
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_common.inl
+	"quaternion_common_simd.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_common_simd.inl
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_float.hpp
+	"../detail/type_quat.hpp"
+
+1578255546 /home/eran-lab/Code/opengl-tutorial/include/glm/detail/type_quat.hpp
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"type_quat.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_relational.hpp
+	"../vector_relational.hpp"
+	"quaternion_relational.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_relational.inl
+
+1578254714 /home/eran-lab/Code/opengl-tutorial/include/glm/detail/type_quat.inl
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"../ext/quaternion_geometric.hpp"
+	<limits>
+	"type_quat_simd.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/detail/type_quat_simd.inl
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_float_precision.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_double.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_double_precision.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_trigonometric.hpp
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"scalar_constants.hpp"
+	"vector_relational.hpp"
+	<limits>
+	"quaternion_trigonometric.inl"
+
+1572690351 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_trigonometric.inl
+	"scalar_constants.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_transform.hpp
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"quaternion_transform.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/ext/quaternion_transform.inl
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtc/quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"epsilon.hpp"
+	<limits>
+	"quaternion_simd.inl"
+
+1536009986 /home/eran-lab/Code/opengl-tutorial/include/glm/gtc/epsilon.hpp
+	"../detail/setup.hpp"
+	"../detail/qualifier.hpp"
+	"epsilon.inl"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtc/epsilon.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtc/quaternion_simd.inl
+
+1536012170 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/compatibility.inl
+	<limits>
+
+1591493538 /home/eran-lab/Code/opengl-tutorial/tests/TestVertexShader.h
+	"Test.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+	<chrono>
+
+1591491694 source:/home/eran-lab/Code/opengl-tutorial/tests/TestVertexShader.cpp
+	"TestVertexShader.h"
+	<GL/glew.h>
+	"DebugManager.h"
+	"imgui.h"
+
+1591493556 /home/eran-lab/Code/opengl-tutorial/tests/TestNoise.h
+	"Test.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+	<chrono>
+
+1591494855 source:/home/eran-lab/Code/opengl-tutorial/tests/TestNoise.cpp
+	"TestNoise.h"
+	<GL/glew.h>
+	"DebugManager.h"
+	"imgui.h"
+
+1592398928 /home/eran-lab/Code/opengl-tutorial/tests/TestLighting.h
+	"Test.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+	<chrono>
+
+1592083221 source:/home/eran-lab/Code/opengl-tutorial/tests/TestLighting.cpp
+	"TestLighting.h"
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	"DebugManager.h"
+	"imgui.h"
+
+1592941634 source:/home/eran-lab/Code/opengl-tutorial/tests/TestScene.cpp
+	"TestScene.h"
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	"DebugManager.h"
+	"imgui.h"
+
+1593013682 /home/eran-lab/Code/opengl-tutorial/tests/TestScene.h
+	"Test.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+	"Camera.h"
+	"Actor.h"
+	"PointLight.h"
+	"DirectionalLight.h"
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+	<chrono>
+	<vector>
+
+1592404829 /home/eran-lab/Code/opengl-tutorial/include/Entity.h
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
+	<glm/gtx/matrix_decompose.hpp>
+
+1592145283 source:/home/eran-lab/Code/opengl-tutorial/src/Entity.cpp
+	"Entity.h"
+
+1592752693 source:/home/eran-lab/Code/opengl-tutorial/src/Camera.cpp
+	"Camera.h"
+
+1592752712 /home/eran-lab/Code/opengl-tutorial/include/Camera.h
+	"Transform.h"
+
+1592406162 /home/eran-lab/Code/opengl-tutorial/include/Object.h
+	"Transform.h"
+	"DebugManager.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+
+1592403662 source:/home/eran-lab/Code/opengl-tutorial/src/Object.cpp
+	"Object.h"
+
+1567838739 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/matrix_decompose.hpp
+	"../mat4x4.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../geometric.hpp"
+	"../gtc/quaternion.hpp"
+	"../gtc/matrix_transform.hpp"
+	"matrix_decompose.inl"
+
+1567838739 /home/eran-lab/Code/opengl-tutorial/include/glm/gtx/matrix_decompose.inl
+	"../gtc/constants.hpp"
+	"../gtc/epsilon.hpp"
+
+1592837293 /home/eran-lab/Code/opengl-tutorial/include/Transform.h
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/quaternion.hpp>
+	<glm/gtx/matrix_decompose.hpp>
+
+1592920249 /home/eran-lab/Code/opengl-tutorial/include/Actor.h
+	"Transform.h"
+	"DebugManager.h"
+	"Renderer.h"
+	"VertexBufferLayout.h"
+	"Texture.h"
+
+1592837313 source:/home/eran-lab/Code/opengl-tutorial/src/Transform.cpp
+	"Transform.h"
+
+1592920849 source:/home/eran-lab/Code/opengl-tutorial/src/Actor.cpp
+	"Actor.h"
+
+1592940852 /home/eran-lab/Code/opengl-tutorial/include/PointLight.h
+	"Light.h"
+
+1592927598 source:/home/eran-lab/Code/opengl-tutorial/src/PointLight.cpp
+	"PointLight.h"
+
+1593013866 /home/eran-lab/Code/opengl-tutorial/include/Light.h
+	"Transform.h"
+
+1592933210 /home/eran-lab/Code/opengl-tutorial/include/DirectionalLight.h
+	"Light.h"
+
+1592927715 source:/home/eran-lab/Code/opengl-tutorial/src/DirectionalLight.cpp
+	"DirectionalLight.h"
+
+1592927573 source:/home/eran-lab/Code/opengl-tutorial/src/Light.cpp
+	"Light.h"
 

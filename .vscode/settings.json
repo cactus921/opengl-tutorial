@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "condition_variable": "cpp",
+        "*.txx": "cpp",
+        "iterator": "cpp"
+    }
+}

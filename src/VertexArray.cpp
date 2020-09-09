@@ -7,12 +7,22 @@ VertexArray::VertexArray()
 {
     //ctor
     GLCALL(glGenVertexArrays(1, &m_RendererID));
+    //GLDebugOut("Vertex Array created, with ID", m_RendererID);
 }
 
+/*
 VertexArray::~VertexArray()
 {
     //dtor
     GLCALL(glDeleteVertexArrays(1, &m_RendererID));
+}
+*/
+
+void VertexArray::Release()
+{
+    GLCALL(glDeleteBuffers(1, &m_RendererID));
+    //GLDebugOut("Vertex Array deleted, with ID", m_RendererID);
+    m_RendererID = 0;
 }
 
 void VertexArray::AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout)
@@ -34,11 +44,13 @@ void VertexArray::AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& la
 void VertexArray::Bind() const
 {
     GLCALL(glBindVertexArray(m_RendererID));
+    //GLDebugOut("Vertex Array bound, with ID", m_RendererID);
 }
 
 
 void VertexArray::Unbind() const
 {
     GLCALL(glBindVertexArray(0));
+    //GLDebugOut("Vertex Array unbound, with ID", m_RendererID);
 }
 
